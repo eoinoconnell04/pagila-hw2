@@ -5,3 +5,9 @@
  * HINT:
  * Use `unnest(special_features)` in a subquery.
  */
+
+
+select title
+from film
+where ('Trailers'=ANY(special_features)
+        AND rating='G');
